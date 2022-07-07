@@ -119,17 +119,41 @@ function sumAllAge(arr) {
 
 sumAllAge(studentArray);
 
+//task 3
+console.log(`
+    task 3
+    `);
+
+let minAge = 100;
+let maxAge = 0;
+let youngestStudent;
+let oldestStudent;
+
+function checkMinAndMaxAge(arr) {
+    arr.forEach(function (elem) {
+
+        studentAge = elem['age'];
+        if (studentAge < minAge) {
+            minAge = studentAge;
+            youngestStudent = elem;
+        }
+        if (studentAge > maxAge) {
+            maxAge = studentAge;
+            oldestStudent = elem;
+        }
+    });
+
+    console.log(`Самый молодой студент - ${youngestStudent.name}, самый старый студент - ${oldestStudent.name}`);
+}
+
+checkMinAndMaxAge(studentArray);
+
 
 
 // 'key' in obj - проверка на наличие ключей в объекте
 
-// 1) Создать массив [ ]  с Вашими одногруппниками в виде объектов { } у объектов есть такие свойства как : -имя , -возраст ,[ -скиллы ]
-// Fun(arr) {
-
-// }
-
 //* Написать функции :
 //* 1) Выбирает объект у которого больше (кол-во) хобби , чем у остальных , но предусмотреть , что могут быть объекты без хобби (такие объекты мы должны игнорировать).
-// 2) Сложить возраст всех участников в группе
-// 3) Выбрать самого молодого и пожилого .
+//* 2) Сложить возраст всех участников в группе
+//* 3) Выбрать самого молодого и пожилого .
 // 4) Выбрать участника у которого самое длинное/короткое имя
