@@ -143,12 +143,40 @@ function checkMinAndMaxAge(arr) {
         }
     });
 
-    console.log(`Самый молодой студент - ${youngestStudent.name}, самый старый студент - ${oldestStudent.name}`);
+    console.log(`Самый молодой студент - ${youngestStudent.name}\nСамый старый студент - ${oldestStudent.name}`);
 }
 
 checkMinAndMaxAge(studentArray);
 
+// task 4
 
+console.log(`
+    task 4
+    `);
+
+let lengthOfShortestName = 100;
+let lengthOfLongestName = 0;
+let studentShortestName = '';
+let studentLongestName = '';
+
+function checkStudentNameLenght(arr) {
+    arr.forEach(function (elem) {
+        studentNameLenght = elem['name'].length;
+
+        if (studentNameLenght < lengthOfShortestName) {
+            lengthOfShortestName = studentNameLenght;
+            studentShortestName = elem;
+        }
+        if (studentNameLenght > lengthOfLongestName) {
+            lengthOfLongestName = studentNameLenght;
+            studentLongestName = elem;
+        }
+    });
+
+    console.log(`Студент, с самым коротким именем - ${studentShortestName.name}\nСтудент, с самым длинным именем - ${studentLongestName.name}`);
+}
+
+checkStudentNameLenght(studentArray);
 
 // 'key' in obj - проверка на наличие ключей в объекте
 
