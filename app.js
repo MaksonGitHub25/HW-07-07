@@ -67,7 +67,9 @@ const studentArray = [
 console.log(studentArray);
 
 // task 1
-console.log('task 1');
+console.log(`
+    task 1
+    `);
 
 function checkEmptySkills(mainArr) {
     const studentsWithSkills = [];
@@ -89,8 +91,6 @@ function checkMaxAmountOfSkills() {
 
     studentWithSkillsArray.forEach(function (elem) {
         const skillsAmount = elem['skills'].length;
-        console.log(elem);
-        console.log('skillsAmount', skillsAmount);
 
         if (skillsAmount > maxSkills) {
             maxSkills = skillsAmount;
@@ -102,10 +102,26 @@ function checkMaxAmountOfSkills() {
 
 checkMaxAmountOfSkills();
 
+//task 2
+console.log(`
+    task 2
+    `);
+
+function sumAllAge(arr) {
+    let sumAllAge = 0;
+
+    arr.forEach(function (elem) {
+        sumAllAge += elem['age'];
+    });
+
+    console.log(`Сумма возрастов всех студентов - ${sumAllAge} лет`);
+}
+
+sumAllAge(studentArray);
+
 
 
 // 'key' in obj - проверка на наличие ключей в объекте
-
 
 // 1) Создать массив [ ]  с Вашими одногруппниками в виде объектов { } у объектов есть такие свойства как : -имя , -возраст ,[ -скиллы ]
 // Fun(arr) {
